@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valentine App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- SPLASH SCREEN -->
+  <div id="splash">
+    <img src="images/first.png" alt="srce" class="splash-heart"> 
+    <h1>❤️ Loading memories...</h1>
+  </div>
+
+  <!-- HOME SCREEN -->
+  <div id="home" style="display:none;">
+    <h2>Stable Build</h2>
+    <div class="home-buttons">
+      <button onclick="goTimeline()">Our Timeline</button>
+      <button onclick="goIdeas()">Date Ideas</button>
+      <button onclick="goReasons()">Why I Love You</button>
+    </div>
+  </div>
+
+  <!-- TIMELINE SCREEN -->
+  <div id="timeline" style="display:none;">
+    <h2>Our Timeline</h2>
+    <div class="timeline-years">
+      <button onclick="showYear('2023')">2023</button>
+      <button onclick="showYear('2024')">2024</button>
+      <button onclick="showYear('2025')">2025</button>
+    </div>
+    <div id="year-content">
+      <!-- OVDJE STAVI SLIKE I TEKST ZA ODABRANU GODINU -->
+      <!-- Primjer: -->
+      <!-- <img src="images/2023_photo1.jpg" alt="Memory 1"> -->
+      <!-- <p>Prvi zajednički putovanje</p> -->
+    </div>
+    <button onclick="backHome('timeline')">Back</button>
+  </div>
+
+  <!-- DATE IDEAS SCREEN -->
+  <div id="ideas" style="display:none;">
+    <h2>Date Ideas</h2>
+    <ul id="ideas-list">
+      <!-- OVDJE DODAJ LISTU IDEJA -->
+      <!-- <li>☕ Coffee date</li> -->
+    </ul>
+    <button onclick="backHome('ideas')">Back</button>
+  </div>
+
+  <!-- REASONS SCREEN -->
+  <div id="reasons" style="display:none;">
+    <h2>Why I Love You</h2>
+    <ul id="reasons-list">
+      <!-- OVDJE DODAJ RAZLOGE -->
+      <!-- <li>Volim tvoj osmijeh 😄</li> -->
+    </ul>
+    <button onclick="showRandomReason()">Random reason</button>
+    <p id="random-reason"></p>
+    <button onclick="backHome('reasons')">Back</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -42,9 +42,7 @@ function showYear(year) {
   content.innerHTML = ""; // očisti prethodno
 
   if (year === '2018') {
-    // DODAJ SVOJE SLIKE I OPIS
-    // primjer:
-    // content.innerHTML += `<img src="images/20181223_200035.jpg" alt="Memory 1" style="width:200px"><p>Opis slike 1</p>`;
+    content.innerHTML += `<img src="images/20181223_200035.jpg" alt="Memory 1" style="width:200px"><p>Opis slike 1</p>`;
   } 
   else if (year === '2019') {
     // slike za 2019

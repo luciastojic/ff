@@ -39,6 +39,10 @@ function showYear(year) {
   if (year === '2019') {
     content.innerHTML += `<img src="images/20190121_015846.jpg" alt="Memory 2" style="width:200px" loading="lazy"><p>Opis slike 1</p>`;
       content.innerHTML += `<img src="images/20190429_212712.jpg" alt="Memory 3" style="width:200px" loading="lazy"><p>Opis slike 1</p>`;
+  currentSlides = [
+        {src:"images/20190121_015846.jpg", caption:"Opis slike 1"},
+        {src:"images/20190429_212712.jpg", caption:"Opis slike 2"}
+    ];
   }
 
   else if (year === '2023') {

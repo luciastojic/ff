@@ -1,15 +1,17 @@
 // SPLASH SCREEN
-window.addEventListener('load', () => {
+document.addEventListener('DOMContentLoaded', () => {
+  // splash se uklanja nakon 1.5 sekunde
   setTimeout(() => {
     document.getElementById('splash').style.display = 'none';
     document.getElementById('home').style.display = 'block';
-  }, 1500); 
+  }, 1500);
 });
 
 // NAVIGACIJA
 function goTimeline() {
+  const timeline = document.getElementById('timeline');
   document.getElementById('home').style.display = 'none';
-  document.getElementById('timeline').style.display = 'block';
+  timeline.style.display = 'block';
 }
 
 function goIdeas() {
@@ -35,7 +37,7 @@ function showYear(year) {
   content.innerHTML = ""; // očisti prethodno
 
   if (year === '2018') {
-    content.innerHTML += `<img src="images/20181223_200035.jpg" alt="Memory 1" style="width:200px "loading="lazy"><p>Opis slike 1</p>`;
+    content.innerHTML += `<img src="images/20181223_200035.jpg" alt="Memory 1" style="width:200px" loading="lazy"><p>Opis slike 1</p>`;
   } 
   else if (year === '2019') {
     // slike za 2019
@@ -50,7 +52,7 @@ function showYear(year) {
     // slike za 2022
   } 
   else if (year === '2023') {
-    content.innerHTML += `<img src="images/2023_photo1.jpg" alt="Memory 1" style="width:200px"><p>Prvi zajednički putovanje</p>`;
+    content.innerHTML += `<img src="images/2023_photo1.jpg" alt="Memory 1" style="width:200px" loading="lazy"><p>Prvi zajednički putovanje</p>`;
     content.innerHTML += `<img src="images/2023_photo2.jpg" alt="Memory 2" style="width:200px"><p>Naš prvi film</p>`;
   } 
   else if (year === '2024') {

@@ -36,6 +36,12 @@ function showYear(year) {
   if (year === '2018') {
     content.innerHTML += `<img src="images/20181223_200035.jpg" alt="Memory 1" style="width:200px" loading="lazy"><p>Opis slike 1</p>`;
   }
+  if (year === '2019') {
+    content.innerHTML += `<img src="images/20190121_015846.jpg" alt="Memory 1" style="width:200px" loading="lazy"><p>Opis slike 1</p>`;
+      content.innerHTML += `<img src="images/20190429_212712.jpg" alt="Memory 1" style="width:200px" loading="lazy"><p>Opis slike 1</p>`;
+
+  }
+
   else if (year === '2023') {
     content.innerHTML += `<img src="images/2023_photo1.jpg" alt="Memory 1" style="width:200px" loading="lazy"><p>Prvi zajednički putovanje</p>`;
     content.innerHTML += `<img src="images/2023_photo2.jpg" alt="Memory 2" style="width:200px" loading="lazy"><p>Naš prvi film</p>`;

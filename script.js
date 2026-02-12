@@ -28,14 +28,7 @@ function backHome(from) {
 }
 
 // TIMELINE
-function showYear(year) {
-  const content = document.getElementById('year-content');
-  content.innerHTML = ""; // očisti prethodno
-Super! 😄 Evo ti gotova funkcija showYear() za 2018–2026 koju možeš staviti u svoj script.js.
 
-Svaka godina ima blok gdje možeš dodavati slike i opis
-
-Samo ubaciš svoje slike u folder images/ i napišeš opis unutar <p>
 
 function showYear(year) {
   const content = document.getElementById('year-content');

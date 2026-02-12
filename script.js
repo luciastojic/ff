@@ -58,6 +58,71 @@ const reasons = [
   "Volim tvoju strpljivost",
   "Volim naše zajedničke avanture"
 ];
+let currentSlides = [];
+let currentIndex = 0;
+
+function showYear(year) {
+  const content = document.getElementById('year-content');
+  content.innerHTML = ""; 
+
+  // Niz slika za ovu godinu
+  if (year === '2018') {
+    currentSlides = [
+      {src:"images/20181223_200035.jpg", caption:"Opis slike 1"}
+    ];
+  } else if (year === '2023') {
+    currentSlides = [
+      {src:"images/2023_photo1.jpg", caption:"Prvi zajednički putovanje"},
+      {src:"images/2023_photo2.jpg", caption:"Naš prvi film"}
+    ];
+  } else if (year === '2024') {
+    currentSlides = [
+      {src:"images/2024_photo1.jpg", caption:"Naša avantura"}
+    ];
+  } else {
+    currentSlides = [];
+  }
+
+  // Kreiraj thumbnail-e
+  currentSlides.forEach((slide, i) => {
+    const img = document.createElement('img');
+    img.src = slide.src;
+    img.alt = slide.caption;
+    img.style.width = "200px";
+    img.loading = "lazy";
+    img.style.margin = "5px";
+    img.onclick = () => openSlideshow(i);
+    content.appendChild(img);
+  });
+}
+
+// Otvori modal na određenoj slici
+function openSlideshow(index) {
+  currentIndex = index;
+  const modal = document.getElementById('slideshow-modal');
+  modal.style.display = 'flex';
+  updateSlide();
+}
+
+// Zatvori modal
+function closeSlideshow() {
+  document.getElementById('slideshow-modal').style.display = 'none';
+}
+
+// Promijeni slide
+function changeSlide(n) {
+  currentIndex += n;
+  if(currentIndex < 0) currentIndex = currentSlides.length - 1;
+  if(currentIndex >= currentSlides.length) currentIndex = 0;
+  updateSlide();
+}
+
+// Update slike u modal
+function updateSlide() {
+  const slide = currentSlides[currentIndex];
+  document.getElementById('slideshow-img').src = slide.src;
+  document.getElementById('slideshow-caption').innerText = slide.caption;
+}
 
 function showRandomReason() {
   const randomIndex = Math.floor(Math.random() * reasons.length);

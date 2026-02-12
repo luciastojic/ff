@@ -8,6 +8,14 @@
   <link rel="preload" href="images/first.png" as="image">
 </head>
 <body>
+<!-- SLIDESHOW MODAL -->
+<div id="slideshow-modal" style="display:none;">
+  <span id="close-slideshow" onclick="closeSlideshow()">✖</span>
+  <img id="slideshow-img" src="" alt="">
+  <p id="slideshow-caption"></p>
+  <button id="prev-slide" onclick="changeSlide(-1)">&#10094;</button>
+  <button id="next-slide" onclick="changeSlide(1)">&#10095;</button>
+</div>
 
   <!-- SPLASH SCREEN -->
   <div id="splash">

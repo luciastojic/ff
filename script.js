@@ -31,8 +31,34 @@ function backHome(from) {
 function showYear(year) {
   const content = document.getElementById('year-content');
   content.innerHTML = ""; // očisti prethodno
+Super! 😄 Evo ti gotova funkcija showYear() za 2018–2026 koju možeš staviti u svoj script.js.
 
-  if (year === '2023') {
+Svaka godina ima blok gdje možeš dodavati slike i opis
+
+Samo ubaciš svoje slike u folder images/ i napišeš opis unutar <p>
+
+function showYear(year) {
+  const content = document.getElementById('year-content');
+  content.innerHTML = ""; // očisti prethodno
+
+  if (year === '2018') {
+    // DODAJ SVOJE SLIKE I OPIS
+    // primjer:
+    // content.innerHTML += `<img src="images/20181223_200035.jpg" alt="Memory 1" style="width:200px"><p>Opis slike 1</p>`;
+  } 
+  else if (year === '2019') {
+    // slike za 2019
+  } 
+  else if (year === '2020') {
+    // slike za 2020
+  } 
+  else if (year === '2021') {
+    // slike za 2021
+  } 
+  else if (year === '2022') {
+    // slike za 2022
+  } 
+  else if (year === '2023') {
     content.innerHTML += `<img src="images/2023_photo1.jpg" alt="Memory 1" style="width:200px"><p>Prvi zajednički putovanje</p>`;
     content.innerHTML += `<img src="images/2023_photo2.jpg" alt="Memory 2" style="width:200px"><p>Naš prvi film</p>`;
   } 
@@ -40,6 +66,10 @@ function showYear(year) {
     content.innerHTML += `<img src="images/2024_photo1.jpg" alt="Memory 1" style="width:200px"><p>Naša avantura</p>`;
   } 
   else if (year === '2025') {
+    content.innerHTML += `<p>Tek počinjemo stvarati uspomene!</p>`;
+    
+  }
+  else if (year === '2026') {
     content.innerHTML += `<p>Tek počinjemo stvarati uspomene!</p>`;
   }
 }

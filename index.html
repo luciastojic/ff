@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Valentine App</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="preload" href="images/first.png" as="image">
 </head>
 <body>
 
@@ -38,12 +39,7 @@
       <button onclick="showYear('2025')">2025</button>
       <button onclick="showYear('2026')">2026</button>
     </div>
-    <div id="year-content">
-      <!-- OVDJE STAVI SLIKE I TEKST ZA ODABRANU GODINU -->
-      <!-- Primjer: -->
-      <!-- <img src="images/2018_photo1.jpg" alt="Memory 1"> -->
-      <!-- <p>Prvi zajednički putovanje</p> -->
-    </div>
+    <div id="year-content"></div>
     <button onclick="backHome('timeline')">Back</button>
   </div>
 
@@ -51,8 +47,9 @@
   <div id="ideas" style="display:none;">
     <h2>Date Ideas</h2>
     <ul id="ideas-list">
-      <!-- OVDJE DODAJ LISTU IDEJA -->
-      <!-- <li>☕ Coffee date</li> -->
+      <li>☕ Coffee date</li>
+      <li>🎬 Movie night</li>
+      <li>🌅 Sunset walk</li>
     </ul>
     <button onclick="backHome('ideas')">Back</button>
   </div>
@@ -61,8 +58,10 @@
   <div id="reasons" style="display:none;">
     <h2>Why I Love You</h2>
     <ul id="reasons-list">
-      <!-- OVDJE DODAJ RAZLOGE -->
-      <!-- <li>Volim tvoj osmijeh 😄</li> -->
+      <li>Volim tvoj osmijeh 😄</li>
+      <li>Volim kako me uvijek nasmiješ</li>
+      <li>Volim tvoju strpljivost</li>
+      <li>Volim naše zajedničke avanture</li>
     </ul>
     <button onclick="showRandomReason()">Random reason</button>
     <p id="random-reason"></p>

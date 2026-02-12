@@ -3,7 +3,7 @@ window.addEventListener('load', () => {
   setTimeout(() => {
     document.getElementById('splash').style.display = 'none';
     document.getElementById('home').style.display = 'block';
-  }, 3000); // 3 sekunde
+  }, 1500); 
 });
 
 // NAVIGACIJA
